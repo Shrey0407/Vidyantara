@@ -37,23 +37,3 @@ You can access the live, deployed version of the application here:
   * *3D Model*: Spline
   * *Hosting*: Vercel
 
-## 📁 Project Structure
-
-
-.
-├── app/
-│   ├── api/
-│   │   ├── analyze/
-│   │   │   └── route.js
-│   │   └── quiz/
-│   │       └── route.js
-│   ├── upload/
-│   │   └── page.js
-│   ├── globals.css
-│   ├── layout.js
-│   └── page.js
-├── components/
-│   └── SplineModel.js
-├── public/
-├── package.json
-└── next.config.js
