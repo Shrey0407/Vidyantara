@@ -1,40 +1,54 @@
-# विद्याntara - AI-Powered Learning Platform
+# विद्याntara - AI-Powered Learning Workspace
 
-A modern, minimalistic landing page for विद्याntara, an AI-powered platform that transforms learning materials into multiple formats.
+*विद्याntara* is a full-stack web application that leverages the Google Gemini API to transform study materials into a dynamic and interactive learning experience. Users can upload documents, images, or audio files to receive AI-generated summaries, take practice quizzes, and ask follow-up questions in a conversational chat interface, with support for multiple languages.
 
-## Features
+## Live Demo 🚀
 
-- **Ultra-minimalistic hero section** with 3D Spline model
-- **Responsive design** with Tailwind CSS
-- **Modern dark theme** with futuristic aesthetics
-- **Smooth animations** and transitions
-- **Content sections** visible on scroll
+You can access the live, deployed version of the application here:
 
-## Tech Stack
+**[https://vidyantara.vercel.app/](https://vidyantara.vercel.app/)**
 
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Font**: Inter (Google Fonts)
-- **3D Model**: Spline (embedded iframe)
+## ✨ Features
 
-## Getting Started
+  * *Multi-Format File Upload*: Supports PDF, image (PNG, JPG), and MP3 audio files.
+  * *AI-Powered Summaries*: Generates concise, well-structured summaries of the uploaded content.
+  * *Dynamic Quiz Generation*: Creates multiple-choice quizzes based on the document to test user knowledge.
+  * *Interactive Chat*: A conversational AI tutor that answers follow-up questions with context from the original document.
+  * *Multilingual Support*: Users can specify their preferred language for summaries and quizzes.
+  * *Rich Text Rendering*: Correctly displays Markdown formatting and complex mathematical (LaTeX) formulas.
 
-1. Install dependencies:
-```bash
-npm install
-```
+## 🛠 Tech Stack
 
-2. Run the development server:
-```bash
-npm run dev
-```
+### Frontend
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+  * *Framework*: Next.js 14 (App Router)
+  * *UI Library*: React
+  * *Styling*: Tailwind CSS
+  * *Markdown Rendering*: react-markdown
+  * *Math Rendering*: remark-math & rehype-katex
 
-## Project Structure
+### Backend
 
-```
+  * *Framework*: Next.js API Routes
+  * *AI*: Google Gemini API (@google/generative-ai)
+
+### External Services
+
+  * *3D Model*: Spline
+  * *Hosting*: Vercel
+
+## 📁 Project Structure
+
+
+.
 ├── app/
+│   ├── api/
+│   │   ├── analyze/
+│   │   │   └── route.js
+│   │   └── quiz/
+│   │       └── route.js
+│   ├── upload/
+│   │   └── page.js
 │   ├── globals.css
 │   ├── layout.js
 │   └── page.js
@@ -42,18 +56,4 @@ npm run dev
 │   └── SplineModel.js
 ├── public/
 ├── package.json
-├── tailwind.config.js
 └── next.config.js
-```
-
-## Design Features
-
-- **Hero Section**: Full-screen 3D model with subtle scroll indicator
-- **Introduction Section**: Welcome badge, headline, sub-headline, and CTA buttons
-- **Features Section**: Three-column grid showcasing platform capabilities
-- **Responsive**: Mobile-first design with smooth breakpoints
-- **Accessibility**: Proper semantic HTML and ARIA labels
-
-## Customization
-
-The design uses a dark theme with blue accents. You can customize colors in `tailwind.config.js` and modify content in `app/page.js`.
